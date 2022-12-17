@@ -1,0 +1,25 @@
+.paginations{
+   
+    width: 85%;
+    margin: auto;
+    background-color: #f6f6ef;
+    padding-bottom: 1rem;
+   
+}
+
+.paginationUl{
+    list-style: none;
+    display: flex;
+    width: 25%;
+    margin: auto;
+}
+
+.paginationList{
+    width: 3rem;
+    margin: 0 0.2rem;
+}
+
+.paginationList button{
+    width: 2.5rem;
+    height: 1.8rem;
+}

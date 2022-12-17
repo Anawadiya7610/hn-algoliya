@@ -1,0 +1,44 @@
+.searchResult{
+    width: 85%;
+    margin: auto;
+    background-color: #f6f6ef;
+    padding-left: 25px;
+}
+
+.stroy{
+   padding: 5px 0;
+}
+
+
+.storyTitle a{
+    text-decoration: none;
+}
+
+.storySpan{
+    font-size: 1.2rem;
+    color: #000;
+    padding-right: 8px;
+}
+
+.storyLinks{
+    color: #5f5f5a;
+}
+
+.storyLinks:hover {
+   text-decoration: underline;
+   color:#5f5f5a;
+}
+.storydata span a{
+    text-decoration: none;
+    color:  #5f5f5a;
+    font-size: 0.8rem;
+}
+
+.storydata span a:hover{
+    text-decoration: underline;
+}
+
+.storySeparator{
+    margin: 0 5px;
+    font-size: 0.8rem;
+}
