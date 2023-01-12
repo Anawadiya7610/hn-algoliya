@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 export default function Pagination(props) {
-  let { currentPage , setPages, totalPage } = props;
+  let { currentPage, setPages, totalPage } = props;
 
   let startNum = currentPage - 2;
   let endNum = currentPage + 2;
@@ -22,21 +22,21 @@ export default function Pagination(props) {
   }
 
   const numArray = new Array(5).fill("").map((_, idx) => idx + startNum);
-  
- var handleClick = (e)=>{
- setPages(e.target.value);
- console.log(setPages);
-  
- }
 
- const handleNext = ()=>{
-  currentPage = currentPage +1; 
- }
+  var handleClick = (e) => {
+    const { dataset } = e.target; // const dataset = e.target.dataset
+    setPages(Number(dataset.id));
+    console.log(dataset.id);
+  };
 
- const handlePrev = ()=>{
-  currentPage = currentPage -1;
- }
- 
+  const handleNext = () => {
+   setPages(currentPage + 1);
+  };
+
+  const handlePrev = () => {
+    setPages(currentPage - 1);
+  };
+
   return (
     <div>
       <div className="paginations">
@@ -49,7 +49,9 @@ export default function Pagination(props) {
 
           {numArray.map((page) => (
             <li key={page} className="paginationList">
-              <button data-id={page} onClick={handleClick}>{page}</button>
+              <button data-id={page} onClick={handleClick}>
+                {page}
+              </button>
             </li>
           ))}
 
@@ -62,4 +64,4 @@ export default function Pagination(props) {
       </div>
     </div>
   );
-} 
+}

@@ -1,6 +1,6 @@
 import { React } from "react";
 import "./styles.css";
-import moment from 'moment';
+import moment from "moment";
 
 export default function Searchresult({ results }) {
   if (!results || !results.length) {
@@ -11,51 +11,63 @@ export default function Searchresult({ results }) {
     );
   }
 
-  // let year = results[0].created_at.split("T")[0].split("-").join("");
-  // console.log(year);
-  // console.log(typeof(year));
-
-
+ 
   return (
     <section className="searchResult">
-      {results.map((el) => (
-        <article key={el.objectID} target="_blank" className="stroy">
-          <div className="storyTitle">
-            <a href={el.url} target="_blank">
-              <span className="storySpan" target="_blank">{el.title}</span>
-            </a>
-            <a href={el.url} target="_blank" className="storyLinks">
-              ({el.url})
-            </a>
-          </div>
+      {results.map((el) => {
+        if ( el._tags.includes("story")) {
+          return (
+            <article key={el.objectID} target="_blank" className="stroy">
+              <div className="storyTitle">
+                <a href={el.url} target="_blank">
+                  <span className="storySpan" target="_blank">
+                    {el.title}
+                  </span>
+                </a>
+                <a href={el.url} target="_blank" className="storyLinks">
+                  ({el.url})
+                </a>
+              </div>
 
-          <div className="storydata">
-            <span>
-              <a href={el.url} target="_blank">{el.points} Points</a>
-            </span>
+              <div className="storydata">
+                <span>
+                  <a href={el.url} target="_blank">
+                    {el.points} Points
+                  </a>
+                </span>
 
-            <span className="storySeparator">|</span>
+                <span className="storySeparator">|</span>
 
-            <span>
-              <a href={el.url} target="_blank">
-                <span>{el.author}</span>
-              </a>
-            </span>
+                <span>
+                  <a href={el.url} target="_blank">
+                    <span>{el.author}</span>
+                  </a>
+                </span>
 
-            <span className="storySeparator">|</span>
+                <span className="storySeparator">|</span>
 
-            <span>
-              <a href={el.url} target="_blank">{moment(`${el.created_at.split("T")[0].split("-").join("")}`).fromNow()}</a>
-            </span>
+                <span>
+                  <a href={el.url} target="_blank">
+                    {moment(
+                      `${el.created_at.split("T")[0].split("-").join("")}`
+                    ).fromNow()}
+                  </a>
+                </span>
 
-            <span className="storySeparator">|</span>
+                <span className="storySeparator">|</span>
 
-            <span>
-              <a href={el.url} target="_blank">{el.num_comments} comments</a>
-            </span>
-          </div>
-        </article>
-      ))}
+                <span>
+                  <a href={el.url} target="_blank">
+                    {el.num_comments} comments
+                  </a>
+                </span>
+              </div>
+            </article>
+          );
+        }
+
+        return <div>this is comment</div>;
+      })}
     </section>
   );
 }

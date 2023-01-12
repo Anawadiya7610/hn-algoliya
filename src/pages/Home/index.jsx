@@ -21,10 +21,23 @@ export default function Home() {
   const getSearchResults = async () => {
     try {
       setResponse(null);
+    
+      // if(tags==='comment'){
+      //   tags = 'comment';
+      // }else if(tags ==='story'){
+      //   tags = 'story';
+      // }
+      
+      // let apiPathname = '';
+      // if(tags==='story'){
+      //   apiPathname = "story";
+      // }else if(tags==='comment'){
+      //   apiPathname = 'comment'
+      // }
+      
       let filterTags = tags === "all" ? "" : tags;
-      let page = 1;
-      let query = searchQuery;
       let numericFilters = "";
+
 
       // const baseApiuUrl = "https://hn.algolia.com/";
       // let apiPathname = '';
@@ -48,19 +61,9 @@ export default function Home() {
       } else if (dateRange === "past_year") {
         let timestampInYear = Math.floor(Date.now() / 1000) - 24 * 365 * 3600;
         numericFilters = `created_at_i>${timestampInYear}`;
-      } else if (dateRange == "custom_range") {
-        let customTime = (
-          <input
-            type="date"
-            id="start"
-            name="trip-start"
-            value="2022-12-10"
-            min="2000-01-01"
-            max="2022-12-10"
-          />
-        );
+      } 
         // numericFilters =  `created_at_i>${customTime}`;
-      }
+     
 
       let apiUrl = `https://hn.algolia.com/api/v1/${
         sort === "date" ? "search_by_date" : "search"
