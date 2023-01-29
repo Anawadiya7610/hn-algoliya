@@ -8,7 +8,7 @@ import "./styles.css";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [tags, setTags] = useState("all");
+  let [tags, setTags] = useState("all");
   const [sort, setSort] = useState("relevance");
   const [dateRange, setRange] = useState("all_time");
   const [searchResponse, setResponse] = useState(null);
@@ -30,9 +30,9 @@ export default function Home() {
       
       // let apiPathname = '';
       // if(tags==='story'){
-      //   apiPathname = "story";
+      //   tags = "story";
       // }else if(tags==='comment'){
-      //   apiPathname = 'comment'
+      //   tags = 'comment'
       // }
       
       let filterTags = tags === "all" ? "" : tags;

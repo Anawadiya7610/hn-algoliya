@@ -4,13 +4,15 @@
     margin: auto;
     background-color: #f6f6ef;
     padding-bottom: 1rem;
-   
+    padding-top: 0.5rem;
 }
 
-.paginationUl{
+
+.paginationUl {
+    padding-left: 0rem;
     list-style: none;
     display: flex;
-    width: 25%;
+    width: 40%;
     margin: auto;
 }
 
@@ -22,4 +24,34 @@
 .paginationList button{
     width: 2.5rem;
     height: 1.8rem;
+}
+
+@media(max-width:800px){
+    
+    .paginationList button{
+        width: fit-content;
+        height: auto;
+    }
+    
+}
+
+@media(max-width:400px){
+    
+.paginations {
+    width: 100%;
+    padding-bottom: 0.2rem;
+    padding-top: 0.5rem;
+}
+}
+
+@media(max-width:650px){
+    .paginationUl {
+        width: 45%;
+    }
+}
+
+@media(max-width:550px){
+    .paginationUl { 
+        margin-left: 4rem;
+    }
 }

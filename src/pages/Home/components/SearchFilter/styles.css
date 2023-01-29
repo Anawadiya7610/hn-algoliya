@@ -56,3 +56,11 @@
 .iconShare{
     font-size: 22px;
 }
+
+
+@media(max-width:400px){
+    .filterContainer {
+        width: 100%;
+        
+    }
+}

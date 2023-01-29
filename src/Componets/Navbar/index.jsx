@@ -36,8 +36,8 @@ export default function Index(props) {
             <p className="para2"> Heacker News</p>
           </span>
         </Navbar.Brand>
-        <Navbar.Collapse id="navbarScroll">
-          <Form className="w-100  d-flex position-relative">
+        <Navbar className="formNav">
+          <Form className=" d-flex position-relative inputForm">
             <i className="fa-solid fa-magnifying-glass icons left-search-icon"></i>
 
             <Form.Control
@@ -56,7 +56,7 @@ export default function Index(props) {
               </div>
             </div>
           </Form>
-        </Navbar.Collapse>
+        </Navbar>
         <div className="searcHeader-setting">
           <a href="/settings">
             <i className="fa-solid fa-gear setting-icon"></i>

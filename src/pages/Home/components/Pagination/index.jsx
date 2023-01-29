@@ -26,7 +26,7 @@ export default function Pagination(props) {
   var handleClick = (e) => {
     const { dataset } = e.target; // const dataset = e.target.dataset
     setPages(Number(dataset.id));
-    console.log(dataset.id);
+    // console.log(dataset.id);
   };
 
   const handleNext = () => {

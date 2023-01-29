@@ -93,3 +93,122 @@
     color: #000;
     padding-left: 0.5rem;
     font-weight: 500;}
+
+.formNav{
+    display: flex;
+    width:70%;
+}
+ .inputForm{
+    width: 95%;
+ }   
+    @media (max-width:1150px){
+       
+        .right-search-text {
+            display: flex;
+           
+            right: 1rem;
+            width: 25%;
+        }
+       
+    }
+    @media (max-width:1050px){
+        .imagelogo{
+            height:2rem;
+        }
+        .para1,.para2{
+            font-size: 1rem;
+            font-weight: 550;
+        }
+        .icons {
+            font-size: 1rem;
+            padding-top: 11px; 
+        }
+        .right-search-font {
+            font-weight: 390;
+            font-size: 1rem;
+        }
+        .headerSetting-text {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .setting-icon{
+            font-size: medium;
+        }
+    }
+
+    @media (max-width:994px){
+      .para1,.para2{
+        font-size: 0;
+        width: 0;
+        display: none;
+      }
+      .headerSetting-text{
+          width: 0;
+          display: none;
+      }
+      .logospan{
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .right-search-text  {
+           width: 0px;
+           display: none;
+      }
+
+      .form-control {
+        width: 50%;
+      }
+      .frominput{
+        width: 80%;
+      }
+      .searcHeader-setting{
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .inputForm{
+        width: 100%;
+        display: flex;
+     }   
+     .whnav {
+        background-color: #ff742b;
+        height: 4rem;
+        padding: 0 0;
+    }
+    }
+
+
+    @media (max-width:850px){
+    .filterContainer {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        padding-right: 10px;
+    }
+    .filterTimer-icon{
+        padding-top: 8px;
+    }
+    .filterSearch{
+        margin-right: 10px;
+    }
+    .filterIcon {
+        margin-right: 0;
+        display: none;
+    }
+    .searchFilter-text{
+        display: none;
+    }
+}
+
+@media (max-width:400px){
+.navmain{
+    width: 100%;
+}
+.filterContainer {
+    width: 100%;
+}
+}

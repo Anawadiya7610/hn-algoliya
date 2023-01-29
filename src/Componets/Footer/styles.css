@@ -9,14 +9,49 @@
     margin: auto;
     display: flex;
     list-style: none;
-    height: 2rem;
     padding-top: 0.2rem;
     justify-content: center;
+    position: relative;
 }
-
+#footerUl1{
+    display: flex;
+}
+#footerUl2{
+    display: flex;
+}
+.footerList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 .footerList a{
     text-decoration: none;
     color:#000 ;
-    margin: 0 0.8rem;
+    margin: 0 0.4rem;
+}
+
+@media(max-width:600px){
+.footerUl{
+    /* flex-direction: column; */
+}
+#footerUl1{
+    width: 45%;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+}
+
+#footerUl2{
+    width: 45%;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+}
+}
+@media(max-width:400px){
+    .footer{
+        width: 100%;
+    }
 }

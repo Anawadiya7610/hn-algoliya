@@ -3,10 +3,12 @@
     margin: auto;
     background-color: #f6f6ef;
     padding-left: 25px;
+    position: relative;
 }
 
 .stroy{
    padding: 5px 0;
+   overflow: hidden;
 }
 
 
@@ -41,4 +43,14 @@
 .storySeparator{
     margin: 0 5px;
     font-size: 0.8rem;
+}
+
+.storyComment_common{
+    padding: 0.8rem 0;
+    padding-right: 1rem;
+}
+@media(max-width:400px){
+    .searchResult {
+        width: 100%;
+    }
 }
